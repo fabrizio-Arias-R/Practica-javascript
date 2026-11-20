@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrizio Arias</title>
+</head>
+<body>
+    <style>
+        .imagen{
+            border: double;
+        }
+        body{
+            background-image: url(https://storage.ghost.io/c/87/83/87834f83-f532-416b-94d2-f1a57b7e2449/content/images/size/w1200/2025/02/valeriadonskaia_Minimalistic_animated_image_clock_is_chasing__d8675f7b-0d2b-41ef-98b6-b7d917607440_2--1-.webp);
+            background-size: cover;            
+            background-repeat: no-repeat;     
+            padding: 6px;
+            margin: 2px;
+            text-align: center;
+            align-items: center;
+        }
+        img{
+            width: 320px;
+            height: 219px;
+            border-radius: 14px;
+            cursor: pointer;
+            padding: 12px;
+            border: 1px 2px skyblue;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            
+        }
+        h1{
+            color: aquamarine;
+            text-shadow: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h2{
+            background-color: azure;
+        }
+        iframe{
+            border-radius: 14px;
+            border: 1px 2px skyblue;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            padding: 12px;
+        }
+    </style>
+    <script>
+
+        function elegir_idioma(idioma_elegido){
+
+            switch (idioma_elegido){
+
+                case 1:
+                    alert("eligeste ingles");
+                    document.getElementById("imagenes").innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/Z6GGAQOMX8c?si=9C-oWm9tkwdW7eaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+                break;
+
+                case 2:
+                    alert("eligeste japones");
+                    document.getElementById("imagenes").innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/_UxIq8vlRTc?si=QwQMR39eujxfVAXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                break;
+                case 3:
+                    alert("eligeste chino");
+                    document.getElementById("imagenes").innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/tbDgpOZ_qQs?si=DG286KvPXIpuuqGl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                break;
+            }
+
+        };
+
+
+        function Actualizar_pantalla(){
+            location.reload();
+        };
+
+
+
+         function Dar_bienvenida(){
+            alert("Muy buenos dias");
+            alert("hoy aprenderemos hacer click sobre las imagenes")
+         };
+    </script>
+    <div id="contenedor">
+    <div>
+        <button onclick="Dar_bienvenida()">Dar la bienvenida</button>
+    </div>
+    <br>
+    <br>
+    <div class="titulo">
+       <h1>Idiomas</h1>
+    </div>
+    <div id="imagenes">
+    <img onclick="elegir_idioma(1)" src="https://cdn-blog.superprof.com/blog_pe/wp-content/uploads/2025/03/palabras-ingles-diccionario-aprender-clases-peru-scaled.jpg" alt="">
+    <img onclick="elegir_idioma(2)" src="https://dokidokijapan.com/wp-content/uploads/2025/12/Grupo-de-estudiantes-preparando-el-examen-Noken.jpg" alt="">
+    <img onclick="elegir_idioma(3)" src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/15FBE/production/_127164009_china_leadership_promo_v2_976.png.webp" alt="">
+    </div class="subtitulo">
+       <h2>(1) ingles *****  (2) chino ****** (3) japones</h2>
+    </div>
+    <button onclick="Actualizar_pantalla()">Revisa nuestras idiomas</button>
+</body>
+</html>

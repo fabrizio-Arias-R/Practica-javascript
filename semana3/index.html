@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrizio Arias</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        //envia un alerta a la pagina
+        alert("Muy buenos días");
+
+        let NameUser=prompt("¿Cómo te llamas?");
+
+        //verificar si la variable se guardo correctamente
+
+        alert(NameUser)
+
+        console.log(typeof NameUser.length)
+
+        //dar expresion una variabler
+
+        alert("hola " +NameUser + " Hoy aprenderemos cuál es la chica de anime que te gusta")
+
+        let prefer_girl_anime=prompt("¿Que tipo de chica te gusta? 1) tipo de chica que me guste 2)chica gatos 3) una chica tsundere")
+
+        //usar las condiconales si se elige la pregunta 
+
+        if(prefer_girl_anime=="1"){
+            //alert("tu opcion seria chica normal");
+            var prefer_girl=("tu opcion seria chica normal");
+            //escribir el ducumento de hmtl
+            //document.write(" <h1>chica anime</h1>");
+            var title_girl=" <h1>chica anime</h1>"
+            //document.write(" <img class='img_option' src='https://w0.peakpx.com/wallpaper/333/513/HD-wallpaper-anime-chica-chica-linda-thumbnail.jpg' alt='chica anime' >");
+            var img_girl=" <img class='img_option' src='https://w0.peakpx.com/wallpaper/333/513/HD-wallpaper-anime-chica-chica-linda-thumbnail.jpg' alt='chica anime' >"
+        }
+        else if(prefer_girl_anime=="2"){
+            //alert("tu opcion seria chica gato");
+            //document.write(" <h1>chica gato</h1>");
+            var title_girl=" <h1>chica gato</h1>"
+            //document.write(" <img class='img_option' src='https://i.pinimg.com/564x/23/94/01/239401d05b4b343255339fb15149d679.jpg' alt='chica anime' >");
+            var  prefer_girl=("tu opcion seria chica gato");
+            var img_girl=" <img class='img_option' src='https://i.pinimg.com/564x/23/94/01/239401d05b4b343255339fb15149d679.jpg' alt='chica anime' >"
+        }
+        else if(prefer_girl_anime=="3"){
+           //alert("tu opcion seria chica tsundere");
+           //document.write(" <h1>chica tsundere</h1>");
+           var title_girl=" <h1>chica tsundere</h1>"
+           //document.write(' <img class="img_option" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GONCEbdy6LE6O3nrqJAdusurZMlYCBljGQ6aY67WhB4a5K416qYkIwg&s=10" alt="chica anime" >');
+           var prefer_girl=("tu opcion seria chica tsundere")
+           var img_girl=' <img class="img_option" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GONCEbdy6LE6O3nrqJAdusurZMlYCBljGQ6aY67WhB4a5K416qYkIwg&s=10" alt="chica anime" >'
+        }
+        else{
+            alert("elige dentro de las opciones");
+        };
+
+        //informe final
+        alert(prefer_girl);
+        //segundo elemento de informe final
+        document.write(title_girl);
+        //tercer elemento de informe final
+        document.write(img_girl);
+        var img_girl = document.querySelector("src");
+
+       while (img_girl != null) {
+       alert("La imagen no existe en la página");
+       break; // Rompemos el bucle para que no sea infinito
+}
+    </script>
+
+    <style>
+
+       body{
+
+        background-color: beige;
+        padding: 5px;
+        text-align: center;
+        color: #FFDD75;
+       }
+
+       h1{
+        text-shadow: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 32px;
+       }
+
+      h2{
+        text-shadow:25px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+       }
+    
+        img{
+            width: 480px;
+            height: 850px;
+        }
+    </style>
+    <h1>¿Que chica de anime te gusta?</h1>
+    <img  src="https://i.pinimg.com/736x/53/ea/ef/53eaef4c2f15ebf242bb0585428305c3.jpg" alt="">
+    <img src="https://w0.peakpx.com/wallpaper/952/601/HD-wallpaper-anime-cat-girl-black-black-and-white-hoodie-skirt-white.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/c6/b5/ac/c6b5ac413fc096e3e2d75345331769f1.jpg" alt="">
+    <h2>---chica normal -- chica gato-- chica tsundere--</h2>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana4</title>
+    <style type="text/css">
+body {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #121212; /* Fondo oscuro moderno */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+img {
+    width: 200px;
+    height: auto; /* Mantiene la proporción real sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+h1 {
+    color: #ffcc00; /* Estilo amarillo tipo cómic */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+h2{
+    color: #ffcc00; /* Estilo amarillo tipo cómic */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+    </style>
+</head>
+<body>
+    <h1>tu Superhereo favorito</h1>
+    <p>Sabras cual es tu superheroe</p>
+    <img src="https://static.wikia.nocookie.net/disney/images/6/64/Profile_-_Spider-Man.png/revision/latest?cb=20211223014352&path-prefix=es" alt="">
+    <img src="https://i.ebayimg.com/images/g/AOAAAOSwtOVlEkiy/s-l1200.jpg" alt="">
+    <img src="https://playcontestofchampions.com/wp-content/uploads/2023/04/champion-iron-man-infinity-war.webp" alt="">
+    <script type="text/javascript">
+          let nombre=prompt("Un gusto. ¿Me podria decir cual es tu nombre?");
+           alert("buenos dias, " + nombre + " hoy veremos tu superheroe favorito");
+           var personaje=prompt("escoge dentro de estas opciones  1) spiderman 2)batman   3)iron man");
+           if(personaje==1){
+            alert("tu personaje favorito seria spiderman ");
+            texto='<h1>spiderman</h1>'
+            imagen_favorito='<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtsEo2ctqM9EURn8RI4ecCJVtAgOO_foytl53-7lCT59k_KvMxkr5uYSPr&s" alt="">'
+           }
+           else if(personaje==2){
+            alert("tu personaje favorito seria batman");
+            texto='<h1>batman</h1>'
+            imagen_favorito='<img src="https://static.wikia.nocookie.net/superman/images/0/0d/Batman_.png/revision/latest?cb=20150115232236&path-prefix=es" alt="">'
+           }else if(personaje==3){
+            alert("tu personaje favorito seria iron man");
+            texto='<h1>iron man</h1>'
+            imagen_favorito='<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TC0tONJJDxzUz3kL45wFZuujuV06kN3RVt2zKdQJCIyHTzgf1H1Bni35&s=10" alt="">'
+           }else{
+            alert("trata de escoger el personaje establecido");
+           }
+           let años=Number(prompt("¿cuantos años tienes?"));
+          let recomendacion = "";
+
+    switch (true) {
+    case (años < 13):
+        recomendacion = "Por tu edad, seguro disfrutas las aventuras juveniles de Spider-Man.";
+        break;
+
+    case (años >= 13 && años <= 18):
+        recomendacion = "Te podría gustar Iron Man y su tecnología avanzada.";
+        break;
+
+    case (años > 18):
+        recomendacion = "El tono más oscuro y estratégico de Batman va contigo.";
+        break;
+
+    default:
+        recomendacion = "No ingresaste una edad válida.";
+        break;
+}
+
+alert(recomendacion);
+           //documento que se envia el texto del superheroe y imagen
+           document.write(texto)
+           document.write(imagen_favorito)
+           let editorial = prompt("¿Qué universo prefieres? (1: Marvel, 2: DC)");
+
+           switch (editorial) {
+           case "1":
+           document.write("<h2>Perteneces al Universo Marvel</h2>");
+           break;
+           case "2":
+           document.write("<h2>Perteneces al Universo DC Comics</h2>");
+           break;
+           default:
+           document.write("<h2>Eres un fanático neutral del cómic</h2>");
+           break;
+}
+    </script>
+</body>
+</html>

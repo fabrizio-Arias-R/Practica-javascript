@@ -1,6 +1,6 @@
-# Ignorar todo lo de f:\programs...
-/*
-# ...excepto estas carpetas y archivos del curso
-!/.gitignore
-!/README.md
-!/semana9/
+# Archivos que no se suben a GitHub
+.vscode/
+*.zip
+# Canciones con derechos de autor (y pesadas): se quedan solo en mi computadora
+*.mp3
+*.flac

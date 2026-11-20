@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana5</title>
+</head>
+<body>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 16px 48px;
+            overflow-x: hidden;
+            color: #f4f7ff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(0 221 220 / 22%), transparent 38%),
+                radial-gradient(ellipse at 88% 30%, rgb(255 72 174 / 19%), transparent 35%),
+                linear-gradient(145deg, #10152e, #192d50 55%, #241638);
+            background-attachment: fixed;
+        }
+
+        h1,
+        h2 {
+            width: fit-content;
+            max-width: 100%;
+            margin: 18px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #a9ffff;
+            font-size: clamp(2rem, 7vw, 4rem);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px #00e5e5, 0 0 32px rgb(0 229 229 / 55%);
+            animation: title-glow 3s ease-in-out infinite alternate;
+        }
+
+        h2 {
+            padding: 10px 22px;
+            border: 1px solid rgb(255 255 255 / 20%);
+            border-radius: 999px;
+            color: #fff;
+            font-size: clamp(1.1rem, 4vw, 1.6rem);
+            background: linear-gradient(100deg, rgb(0 205 210 / 30%), rgb(228 72 169 / 35%));
+            box-shadow: 0 8px 28px rgb(0 0 0 / 25%);
+        }
+
+        img {
+            display: block;
+            width: min(380px, 90vw);
+            height: min(380px, 90vw);
+            margin: 24px auto;
+            border: 3px solid rgb(255 255 255 / 75%);
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: 0 14px 40px rgb(0 0 0 / 40%), 0 0 24px rgb(0 225 225 / 30%);
+            animation: image-float 5s ease-in-out infinite;
+            transition: transform 250ms ease, box-shadow 250ms ease;
+        }
+
+        img:hover {
+            transform: scale(1.04) rotate(-1deg);
+            box-shadow: 0 18px 48px rgb(0 0 0 / 50%), 0 0 32px rgb(255 72 174 / 55%);
+        }
+
+        audio {
+            display: block;
+            width: min(420px, 100%);
+            margin: 20px auto;
+            accent-color: #00d9d9;
+            filter: drop-shadow(0 8px 14px rgb(0 0 0 / 30%));
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 12px 32px rgb(0 0 0 / 35%);
+        }
+
+        @keyframes title-glow {
+            from { text-shadow: 0 0 10px #00e5e5, 0 0 22px rgb(0 229 229 / 40%); }
+            to { text-shadow: 0 0 16px #00e5e5, 0 0 38px rgb(255 72 174 / 65%); }
+        }
+
+        @keyframes image-float {
+            0%, 100% { translate: 0 0; }
+            50% { translate: 0 -7px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <h1>hololive</h1>
+    <script>
+        //repaso de javascript aui es interacion con el usuario
+        const nombre=prompt("Buenos dias estimado,¿Me podria decir tu nombre?");
+        alert("Buenos dias "+ nombre+" hoy veremos las condiciones anidadas y el switch case");
+        let persona_favorita=prompt("Elige de estas canciones para su           tipo cantante preferido 1)hoshimachi suisei 2)sakura miko");
+        // condicon de el personaje favorito
+        if(persona_favorita==1){
+            alert("hoshimachi suisei es muy genial");
+            let cancion_favorita=prompt("¿cual es su cancion favorita de estas? 1)pathfinder 2)stellar stellar");
+            //switch de la cancion que le gusta
+            switch(cancion_favorita){
+                case "1":cancion_favorita
+                  alert("pathfinder es una muy buena cancion");
+                  document.write("<h1>a nombre de "+nombre+"</h1>");
+                  document.write("<br>");
+                  document.write("<h2>Hoshimachi suisei</h2>");
+                  document.write("<br>");
+                  document.write('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT25y2htWrGBSnnscszOah-5d-t1hKBuvh4IuTZhOgv3A&s=10" alt="">');
+                  document.write("<br>");
+                  document.write("<br>");
+                  document.write('<audio controls><source src="01. Pathfinder.mp3" type="audio/mpeg"></audio>');
+                  break;
+                case "2":cancion_favorita
+                  alert("stellar stellar es una excelente cancion");
+                  document.write("<h1>a nombre de "+nombre+"</h1>");
+                  document.write("<br>");
+                  document.write("<h2>Hoshimachi suisei</h2>");
+                  document.write("<br>");
+                  document.write('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT25y2htWrGBSnnscszOah-5d-t1hKBuvh4IuTZhOgv3A&s=10" alt="">');
+                  document.write("<br>");
+                  document.write("<br>");
+                  document.write('<audio controls><source src="Hoshimachi_Suisei_-_Stellar_Stellar_(mp3.pm).mp3" type="audio/mpeg"></audio>');
+                  break;
+                default:cancion_favorita
+                alert("escoge una cancion que todavia no lo tenemos");
+                break;
+            }
+            
+        }else if(persona_favorita==2){
+            alert("Sakura Miko es muy genial");
+            let cancion_favorita=prompt("¿cual es su cancion favorita de estas? 1)cherry message 2)fashon beat");
+                        //switch de la cancion que le gusta
+            switch (cancion_favorita){
+             case "1":
+                alert("cherry message es una muy buena cancion");
+                  document.write("<h1>a nombre de "+nombre+"</h1>");
+                  document.write("<br>");
+                  document.write("<h2>Sakura miko</h2>");
+                  document.write("<br>");
+                  document.write('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7LM25fS4UikbhbgF2x0Uhx-lD4bNaHcjLU1qOFq08rHESG1Bp6A069fNC&s=10" alt="">');
+                  document.write("<br>");
+                  document.write("<br>");
+                  document.write('<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/pe/song/cherry-message/1767578936"></iframe>');
+                break;
+             case "2":
+                alert("fashon beat No importa los años es buena cancion");
+                  document.write("<h1>a nombre de "+nombre+"</h1>");
+                  document.write("<br>");
+                  document.write("<h2>Sakura miko</h2>");
+                  document.write("<br>");
+                  document.write('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7LM25fS4UikbhbgF2x0Uhx-lD4bNaHcjLU1qOFq08rHESG1Bp6A069fNC&s=10" alt="">');
+                  document.write("<br>");
+                  document.write("<br>");
+                  document.write('<audio controls><source src="fashon_beat.mp3" type="audio/mpeg"></audio>');
+                break;
+
+             default:
+                alert("escoge una cancion");
+                break;
+            }
+        }else{
+            alert("Pronto podemas tener ese personaje")
+        };
+
+
+
+
+    </script>
+    <!--
+     <h1>hololive</h1>
+    <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/06/Hoshimachi-Suisei_list_thumb.png" alt="">
+    <img src="https://cdn-images.dzcdn.net/images/artist/fb5815a6f78708ede2da0f204231dc21/1900x1900-000000-80-0-0.jpg" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7LM25fS4UikbhbgF2x0Uhx-lD4bNaHcjLU1qOFq08rHESG1Bp6A069fNC&s=10" alt="">
+    <br> <br>
+    <audio controls><source src="Hoshimachi_Suisei_-_Stellar_Stellar_(mp3.pm).mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="01. Pathfinder.mp3" type="audio/mpeg"></audio>
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/pe/song/cherry-message/1767578936"></iframe>
+-->
+</body>
+</html>

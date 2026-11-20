@@ -8,21 +8,37 @@
 <body>
     <script>
         alert("Buenos dias, hoy aprenderemos a usar los bucles. Esto es el fin de mi practicas de javascript basado en lo que nos enseño el profesor.");
-        let ahorrar= Number(prompt("¿Cuanto desea ahorrar?"));
-        alert("has ahorrado "+ ahorrar);
-        let cuenta_bancaria=0;
+         ahorrar= Number(prompt("¿Cuanto desea ahorrar? (en $)"));
+         while(ahorrar<1){
+            alert("ahorra mayor a un numero de 0$");
+              ahorrar= Number(prompt("¿Cuanto desea ahorrar? (en $)"));
+              
+        }
+        
+        var cuenta_bancaria=0
         cuenta_bancaria=cuenta_bancaria+ahorrar;
-        alert("tienes ahorrado "+cuenta_bancaria+" en la cuenta bancaria");
-        respuesta=prompt("¿Quiere desea volver ahorrar?  1) Si 2) No")
-        if(ahorrar<1){
-            alert("ahorra mayor a un numero de 0");
-            let ahorrar= alert("¿Cuanto desea ahorrar?");
+        alert("tienes ahorrado "+cuenta_bancaria+"$ en la cuenta bancaria");
+        respuesta=prompt("¿Desea volver a ahorrar? (s/n)");
+        while(!(respuesta=="s") && !(respuesta=="n")){
+            alert("Ingresa 's' o 'n' minúsculas en tu respuesta");
+            respuesta=prompt("¿Desea volver a ahorrar? (s/n)");
         }
-        while(respuesta!="s" && respuesta!="S"){
-           respuesta=prompt("¿Quiere desea volver ahorrar?  1) Si 2) No")
+        while(respuesta=="s"){
+             ahorrar= Number(prompt("¿Cuanto desea ahorrar? (en $)"));
+            alert("has ahorrado "+ ahorrar +"$");
+            cuenta_bancaria=cuenta_bancaria+ahorrar;
+           alert("tienes ahorrado "+cuenta_bancaria+"$ en la cuenta bancaria");
+            respuesta=prompt("¿Desea volver a ahorrar? (s/n)");
+            while(!(respuesta=="s") && !(respuesta=="n")){
+            alert("Ingresa 's' o 'n' minúsculas en tu respuesta");
+             respuesta=prompt("¿Desea volver a ahorrar? (s/n)");
+            }
         }
+        alert("Gracias por ahorrar en el banco. Total final: "+cuenta_bancaria+"$");
     </script>
     <h1>Bucles</h1>
+
+    <p>Pagina que tiene la intencion de una pagina que cuenta el numero ahorrados con bucles.</p>
 
 </body>
 </html>

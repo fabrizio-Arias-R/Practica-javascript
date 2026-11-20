@@ -63,7 +63,7 @@ body::after{
 
 @keyframes olas{
   from{ transform: translateX(0); }
-  to  { transform: translateX(-60%); }
+  to  { transform: translateX(-50%); }
 }
 
 /* ---------- Título ---------- */

@@ -21,5 +21,5 @@ Las ilustraciones de `semana9/img/` son fan art de sus respectivos artistas y se
 
 - `sora.jpg`: zerochan.net (Tokino Sora, #3715827)
 - `roboco.jpg`: zerochan.net (Roboco, #4552755)
-- `azki.jpg`: imagen encontrada en Google Imágenes (artista por confirmar)
-- `fondo-playa.webp`: publicada en X/Twitter (artista por confirmar)
+- `azki.jpg`: imagen encontrada en Google Imágenes 
+- `fondo-playa.webp`: publicada en X/Twitter

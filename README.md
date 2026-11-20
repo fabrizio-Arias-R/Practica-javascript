@@ -2,9 +2,18 @@
 
 Prácticas del curso de JavaScript, guardadas semana a semana mientras aprendo.
 
-| Semana | Tema | Archivo |
-|---|---|---|
-| 9 | Arreglos: galería de Hololive Gen 0 con tema de playa | [semana9/arreglos.html](semana9/arreglos.html) |
+| Semana | Tema | Ver página | Código |
+|---|---|---|---|
+| 2 | Práctica | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana2/index.html) | [semana2/index.html](semana2/index.html) |
+| 3 | Práctica | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana3/index.html) | [semana3/index.html](semana3/index.html) |
+| 4 | Doble condicional | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana4/doblecondicional.html) | [semana4/doblecondicional.html](semana4/doblecondicional.html) |
+| 5 | Condicionales anidados | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana5/condicionalanidada.html) | [semana5/condicionalanidada.html](semana5/condicionalanidada.html) |
+| 6 | Práctica | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana6/s.html) | [semana6/s.html](semana6/s.html) |
+| 7 | Condiciones | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana7/condicion.html) | [semana7/condicion.html](semana7/condicion.html) |
+| 8 | Práctica | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana8/ps.html) | [semana8/ps.html](semana8/ps.html) |
+| 9 | Arreglos: galería de Hololive Gen 0 con tema de playa | [abrir](https://fabrizio-arias-r.github.io/Practica-javascript/semana9/arreglos.html) | [semana9/arreglos.html](semana9/arreglos.html) |
+
+> En la semana 5 las canciones no están subidas (tienen derechos de autor), así que los reproductores aparecen sin audio.
 
 ## Créditos de las imágenes
 

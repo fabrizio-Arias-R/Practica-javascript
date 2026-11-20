@@ -6,6 +6,23 @@
     <title>Semana 8 </title>
 </head>
 <body>
+    <script>
+        alert("Buenos dias, hoy aprenderemos a usar los bucles. Esto es el fin de mi practicas de javascript basado en lo que nos enseño el profesor.");
+        let ahorrar= Number(prompt("¿Cuanto desea ahorrar?"));
+        alert("has ahorrado "+ ahorrar);
+        let cuenta_bancaria=0;
+        cuenta_bancaria=cuenta_bancaria+ahorrar;
+        alert("tienes ahorrado "+cuenta_bancaria+" en la cuenta bancaria");
+        respuesta=prompt("¿Quiere desea volver ahorrar?  1) Si 2) No")
+        if(ahorrar<1){
+            alert("ahorra mayor a un numero de 0");
+            let ahorrar= alert("¿Cuanto desea ahorrar?");
+        }
+        while(respuesta!="s" && respuesta!="S"){
+           respuesta=prompt("¿Quiere desea volver ahorrar?  1) Si 2) No")
+        }
+    </script>
     <h1>Bucles</h1>
+
 </body>
 </html>

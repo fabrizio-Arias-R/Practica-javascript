@@ -1,0 +1,264 @@
+/* =========================================================
+   TEMA PLAYA 🏖️
+   Colores guardados como variables para reutilizarlos
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+:root{
+  --mar:          #1fa2c7;   /* azul mar */
+  --mar-oscuro:   #0b6e8a;   /* mar profundo */
+  --espuma:       #fdfaf3;   /* blanco espuma */
+  --arena:        #e6cfa1;   /* arena */
+  --arena-oscura: #c2a36b;   /* arena mojada */
+  --coral:        #ff7f6b;   /* coral */
+  --sol:          #ffd166;   /* amarillo sol */
+  --texto:        #4a3b22;   /* café para leer bien sobre arena */
+  --sombra:       0 8px 24px rgba(11, 110, 138, 0.35);
+}
+
+/* ---------- Fondo (se mantiene tu imagen) ---------- */
+body{
+  background-image: url(img/fondo-playa.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 16px 16px 120px;      /* espacio abajo para las olas */
+  box-sizing: border-box;
+  font-family: 'Fredoka', 'Lucida Sans', Verdana, sans-serif;
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+/* Capa de "cielo y mar" encima de la imagen para que todo se lea mejor */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(135, 206, 235, 0.25),   /* cielo */
+    rgba(31, 162, 199, 0.15) 60%,
+    rgba(230, 207, 161, 0.35)    /* arena */
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Olas animadas en la parte de abajo */
+body::after{
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  height: 90px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 90' preserveAspectRatio='none'><path d='M0 45 Q150 0 300 45 T600 45 T900 45 T1200 45 V90 H0Z' fill='%231fa2c7' fill-opacity='0.75'/><path d='M0 60 Q150 25 300 60 T600 60 T900 60 T1200 60 V90 H0Z' fill='%23fdfaf3' fill-opacity='0.6'/></svg>") repeat-x;
+  background-size: 50% 100%;
+  animation: olas 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes olas{
+  from{ transform: translateX(0); }
+  to  { transform: translateX(-60%); }
+}
+
+/* ---------- Título ---------- */
+h1{
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  color: var(--espuma);
+  margin: 8px 0 16px;
+  letter-spacing: 2px;
+  text-shadow:
+    3px 3px 0 var(--coral),
+    6px 6px 0 rgba(11, 110, 138, 0.5);
+}
+
+h1::before{
+  content: "☀️";
+  display: inline-block;
+  margin-right: 10px;
+  animation: girar 10s linear infinite;
+}
+
+h1::after{
+  content: "🌊";
+  margin-left: 10px;
+}
+
+@keyframes girar{
+  to{ transform: rotate(360deg); }
+}
+
+/* ---------- Tarjeta de la imagen (efecto vidrio) ---------- */
+.elecion-imagenes{
+  width: fit-content;
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 14px;
+  text-align: center;
+  background: rgba(253, 250, 243, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  box-shadow: var(--sombra);
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+  width: 320px;
+  max-width: 100%;               /* que no se salga en celular */
+  aspect-ratio: 4 / 5;           /* marco vertical: todas miden igual */
+  height: auto;
+  object-fit: cover;             /* recorta sin deformar */
+  object-position: top center;   /* recorta desde arriba para no cortar la cara */
+  background-color: var(--espuma); /* se ve mientras carga la imagen */
+  border: 6px solid var(--espuma);
+  border-radius: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: aparecer 0.5s ease;  /* se anima cada vez que cambia la imagen */
+}
+
+img:hover{
+  transform: rotate(-2deg) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes aparecer{
+  from{ opacity: 0; transform: translateY(20px) scale(0.95); }
+  to  { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ---------- Nombre (h2) ---------- */
+.fondo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 320px;
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: var(--espuma);
+  border: 3px dashed var(--mar);
+  border-radius: 999px;
+  box-shadow: var(--sombra);
+  animation: rebote 0.6s ease;   /* rebota cada vez que cambia el nombre */
+}
+
+/* Icono por defecto */
+.fondo::before{ content: "🐚"; }
+.fondo::after { content: "🐚"; }
+
+/* Iconos de cada talento (sus "oshi marks") */
+.sora::before  { content: "🐻"; }
+.sora::after   { content: "💿"; }
+
+.azki::before  { content: "⚒️"; }
+.azki::after   { content: "🎵"; }
+
+.roboco::before{ content: "🤖"; }
+.roboco::after { content: "⚙️"; }
+
+/* Color del borde según el talento */
+.sora  { border-color: #4a90e2; }   /* azul */
+.azki  { border-color: #e75480; }   /* rosa */
+.roboco{ border-color: #f2a03d; }   /* naranja */
+
+#nombre_gen0{
+  color: var(--coral);
+}
+
+@keyframes rebote{
+  0%  { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100%{ transform: scale(1); }
+}
+
+/* ---------- Lista de nombres (h3) ---------- */
+.fondo-h3{
+  width: 300px;
+  max-width: 100%;
+  margin: 12px auto;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--sol);
+  background: linear-gradient(135deg, var(--mar), var(--mar-oscuro));
+  border-radius: 28px;
+  box-shadow: var(--sombra);
+}
+
+.text-center{
+  text-align: center;
+  align-items: center;
+}
+
+/* ---------- Botones de arena ---------- */
+.boton{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+button{
+  display: block;
+  margin: 8px;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--texto);
+  background-color: var(--arena);
+  border: 2px solid var(--arena-oscura);
+  border-radius: 32px;
+  box-shadow: 0 5px 0 var(--arena-oscura);   /* efecto botón 3D */
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+}
+
+button:hover{
+  background-color: #d9bc85;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 var(--arena-oscura);
+}
+
+button:active{
+  transform: translateY(3px);                 /* se "hunde" al hacer clic */
+  box-shadow: 0 2px 0 var(--arena-oscura);
+}
+
+button:focus-visible{
+  outline: 3px solid var(--mar);
+  outline-offset: 3px;
+}
+
+/* Un emoji para cada botón según la función que llama */
+button[onclick*="Dar_bienvinida"]::before{ content: "👋 "; }
+button[onclick*="Retroceder"]::before   { content: "⬅️ "; }
+button[onclick*="Dar_inicio"]::before   { content: "🏖️ "; }
+button[onclick*="Avanzar"]::after       { content: " ➡️"; }
+
+/* Si la persona prefiere menos movimiento, se quitan las animaciones */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation: none !important;
+    transition: none !important;
+  }
+}

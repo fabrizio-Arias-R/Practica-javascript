@@ -1,0 +1,6 @@
+# Ignorar todo lo de f:\programs...
+/*
+# ...excepto estas carpetas y archivos del curso
+!/.gitignore
+!/README.md
+!/semana9/
